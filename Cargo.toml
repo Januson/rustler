@@ -1,0 +1,6 @@
+[package]
+name = "rustler"
+version = "0.1.0"
+authors = ["Ondřej Januš <janusonx@gmail.com>"]
+
+[dependencies]
