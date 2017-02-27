@@ -18,7 +18,7 @@ impl Iterator for Fibonacci {
 pub fn sum_even_fib() ->u64 {
     return Fibonacci { curr: 1, next: 1}
         .take_while(|&x| x < 4_000_000)
-        .filter(|x| x % 2 == 0)
+        .filter(|&x| x % 2 == 0)
         .sum::<u64>();
 }
 
