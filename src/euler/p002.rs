@@ -1,3 +1,7 @@
+//#![feature(test)]
+
+//extern crate test;
+
 struct Fibonacci {
     curr: u64,
     next: u64,
@@ -21,8 +25,18 @@ pub fn sum_even_fib() ->u64 {
         .sum::<u64>();
 }
 
-#[test]
-fn sum_even_up_to_4_000_000() {
-    assert_eq!(sum_even_fib(), 4613732);
-}
+#[cfg(test)]
+mod tests {
+    use super::*;
+//    use test::Bencher;
 
+    #[test]
+    fn sum_even_up_to_4_000_000() {
+        assert_eq!(sum_even_fib(), 4613732);
+    }
+
+//    #[bench]
+//    fn bench_sum_even_up_to_4_000_000(b: &mut Bencher) {
+//        b.iter(|| sum_even_fib());
+//    }    
+}
