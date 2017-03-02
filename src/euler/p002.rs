@@ -6,19 +6,18 @@ struct Fibonacci {
 impl Iterator for Fibonacci {
     type Item = u64;
     fn next(&mut self) -> Option<u64> {
-        let new_next = self.curr + self.next;
-        
+        let result = self.curr;
+	let new_next = self.curr + 4 * self.next; 
         self.curr = self.next;
         self.next = new_next;
         
-        Some(self.curr)
+        Some(result)
     }
 }
 
 pub fn sum_even_fib() ->u64 {
-    return Fibonacci { curr: 1, next: 1}
+    return Fibonacci { curr: 2, next: 8}
         .take_while(|&x| x < 4_000_000)
-        .filter(|&x| x % 2 == 0)
         .sum::<u64>();
 }
 
