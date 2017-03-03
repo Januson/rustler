@@ -6,9 +6,6 @@ use euler::p003::largest_prime_factor;
 use euler::p004::max_palindrome;
 
 fn main() {
-    for i in (0..10).rev() {
-        println!("{}", i);
-    }
     println!("{}", max_palindrome());
     println!("{}", largest_prime_factor(600851475143));
     println!("{}", sum_even_fib());
