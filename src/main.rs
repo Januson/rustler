@@ -17,7 +17,7 @@ fn print_solutions() {
     print_problem(2, "Even Fibonacci numbers", sum_even_fib());
     print_problem(3, "Largest prime factor", largest_prime_factor(600851475143));
     print_problem(4, "Largest palindrome product", max_palindrome());
-    print_problem(5, "Smallest multiple from 1 to 20", smallest_multiple());
+    print_problem(5, "Smallest multiple from 1 to 20", smallest_multiple(20));
 
 }
 
