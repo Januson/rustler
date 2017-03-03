@@ -20,9 +20,9 @@ impl Iterator for Fibonacci {
 }
 
 pub fn sum_even_fib() ->u64 {
-    return Fibonacci { curr: 2, next: 8}
+    Fibonacci { curr: 2, next: 8}
         .take_while(|&x| x < 4_000_000)
-        .sum::<u64>();
+        .sum::<u64>()
 }
 
 #[cfg(test)]
