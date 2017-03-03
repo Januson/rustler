@@ -1,11 +1,7 @@
-pub fn sum_multiples(limit: i32) -> i32 {
-    let mut sum: i32 = 0;
-    for i in 1..limit {
-        if i % 3 == 0 || i % 5 == 0 {
-            sum += i;
-        }
-    }
-    return sum;
+pub fn sum_multiples(limit: u32) -> u32 {
+    (1..limit)
+        .filter(|x| x % 3 == 0 || x % 5 == 0)
+        .sum::<u32>()
 }
 
 
